@@ -11,8 +11,9 @@ function App() {
      <Header/>
     <Routes>
     <Route index element={<Home/>}/>
-     {/*  <Route path='/home' element={<Home/>}/>
-     <Route path="/footer" element={<Footer/>}/> */}
+      <Route path='/home' element={<Home/>}/>
+     <Route path="/footer" element={<Footer/>}/>
+    
     </Routes>
    </Router>
   );

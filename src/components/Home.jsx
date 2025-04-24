@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaClipboard, FaFacebook, FaInstagram, FaLayerGroup, FaPen, FaPinterest, FaTiktok, FaTruck } from 'react-icons/fa';
+import { FaClipboardUser } from 'react-icons/fa6';
 import { Link } from 'react-router';
 
 const Home = () => {
@@ -65,23 +67,134 @@ pieces designed for comfort, crafted to last,
    <h1>smart Furniture for every home</h1>
            <div className="categories">
            <figure>
-            <img src="" alt="" />
+            <img src={require('./images/livingRoom.jpg')} alt="" />
             <figcaption>living room</figcaption>
            </figure>
            <figure>
-            <img src="" alt="" />
+            <img src={require('./images/bedroom.jpg')} alt="" />
             <figcaption>bedroom</figcaption>
            </figure>
            <figure>
-            <img src="" alt="" />
+            <img src={require('./images/office.jpg')} alt="" />
             <figcaption>office</figcaption>
            </figure>
            <figure>
-            <img src="" alt="" />
+            <img src={require('./images/dining.jpg')} alt="" />
             <figcaption>dining</figcaption>
            </figure>
            </div>
+           <h1>Our Special Essentials</h1>
+           <div className="services">
+            <div className="houser">
+                <p className="circle">
+                    <FaPen className='icon'/>
+                </p>
+                <h3>Smart Design</h3>
+                <p>Thoughtfully crafted for style 
+                and daily comfort</p>
+            </div>
+            <div className="houser">
+            <p className="circle">
+                <FaLayerGroup/>
+            </p>
+                <h3>Built To Last</h3>
+                <p>Durable materials, made to
+                stand the test.</p>
+            </div>
+            <div className="houser">
+            <p className="circle">
+              <FaClipboardUser/>
+            </p>
+                <h3>Space optimization</h3>
+                <p>Compact pieces that maximize 
+                every inch.</p>
+            </div>
+            <div className="houser">
+            <p className="circle">
+                <FaTruck/>
+            </p>
+                <h3>Easy Shop</h3>
+                <p>Seamless browsing, fast checkout,
+                doorstep delivery.</p>
+            </div>
+           </div>
    </section>
+   <section className='bottom-hero-section'>
+  <div className="bottom-hero">
+   <img src={require('./images/yellowCouch.jpg')} alt="" />
+   <div className="bottom-center-text">
+    <h1>
+    Furniture Made 
+    for Living
+    </h1>
+    <p>
+    Create a space that feels like home with 
+pieces designed for comfort, crafted to last,
+ and styled to inspire.
+    </p>
+   <Link to='#'>
+   <button>shop</button>
+   </Link>
+   </div>
+  </div>
+   </section>
+  
+
+
+
+  <footer>
+         <div className="footer-container">
+             <div className="newsletter">
+                 <h3>join our newsletter</h3>
+                 <input type="text" name="" id="" placeholder='Enter your email'/><button>submit</button>
+                 <p>
+                 No spam, just style. Get design tips,
+ fresh finds, and special offers
+ straight to your inbox!
+                 </p>
+             </div>
+     
+             <div className='quick-links'>
+                 <h2>quick links</h2>
+                 <ul>
+                     <li><Link to="#">home</Link></li>
+                     <li><Link to="#">shop</Link></li>
+                     <li><Link to="#">about us</Link></li>
+                     <li><Link to="#">contact</Link></li>
+                     <li><Link to="#">FAQS</Link></li>
+                 </ul>
+             </div>
+             <div className='usefull-info'>
+                 <h2>usefull info</h2>
+                 <ul>
+                     <li>
+                         shipping & returns
+                     </li>
+                     <li>
+                         Privacy Policy
+                     </li>
+                     <li>
+                         Terms & conditions
+                     </li>
+                     <li>
+                         Track Your order
+                     </li>
+                 </ul>
+             </div>
+             <div className='connect'>
+                 <h2>connect</h2>
+                 <ul>
+                     <li><Link to="#"><FaInstagram/></Link></li>
+                     <li><Link to="#"><FaFacebook/></Link></li>
+                     <li><Link to="#"><FaPinterest/></Link></li>
+                     <li><Link to="#"><FaTiktok/></Link></li>
+                 </ul>
+             </div>
+         </div>
+         <div className="copy-cont">
+             <p className="copywrite">&copy; 2025 <Link to="privilswebdev.co.za">privilswebdev</Link>.all rights reserved </p>
+         </div>
+        </footer>
    </>
   )
 }
