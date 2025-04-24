@@ -12,9 +12,8 @@ function App() {
     <Routes>
     <Route index element={<Home/>}/>
       <Route path='/home' element={<Home/>}/>
-     <Route path="/footer" element={<Footer/>}/>
-    
     </Routes>
+    <Footer/>
    </Router>
   );
 }

@@ -12,12 +12,15 @@ header{
   justify-content: space-between;
   padding: 7px;
 }
-nav{
-  width: calc(70%);
+nav {
+  width: 70%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
 }
-nav .logo{
+
+nav .logo {
   color: white;
   font-size: 48px;
   text-decoration: none;
@@ -25,14 +28,16 @@ nav .logo{
   text-transform: capitalize;
   font-weight: 800;
 }
-nav ul{
+
+nav ul {
   display: flex;
   justify-content: space-evenly;
-  width: calc(60%);
+  width: 60%;
   gap: 15px;
   align-items: center;
 }
-nav ul li{
+
+nav ul li {
   list-style: none;
 }
 
@@ -41,8 +46,42 @@ nav ul li a{
   color: white;
   font-size: 1em;
   text-transform: capitalize;
-
 }
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+nav ul.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100%;
+  width: 250px;
+  background-color: #024751;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  z-index: -999;
+  transition: right 0.3s ease-in-out;
+}
+
+
+nav ul.nav-menu.active {
+  right: 0;
+}
+
+
+.bars {
+  display: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 header div{
   width: calc(20%);
   display: flex;
@@ -111,7 +150,6 @@ header div{
 }
 .container{
   display: flex;
-  /* margin: 40px 0; */
   flex-direction: row;
   align-items: center;
   place-content: center;
@@ -279,7 +317,7 @@ figure button{
 }
 footer{
   width: 100%;
-  height: 484px;
+  height: 350px;
   background: #024751;
 }
 .footer-container{
@@ -307,6 +345,14 @@ margin: 20px 10px;
   border: 1px solid black;
   border-radius: 5px;
 }
+.newsletter button:hover{
+  padding: 5.5px;
+  background-color: #0c905b;
+  border: 1px solid rgb(255, 255, 255);
+  color: white;
+  cursor: pointer;
+  transition: ease .35s;
+}
 .newsletter p{
   margin: 15px 10px;
   word-spacing: .3px;
@@ -330,10 +376,34 @@ margin: 15px 3px;
   text-decoration: none;
   text-transform: capitalize;
 }
-.quick-links ul li a:hover, .connect ul li a:hover{
+.quick-links ul li a:hover{
  cursor: pointer;
  transition: all .25s ease-in;
  color: rgb(152, 152, 152);
+}
+.connect ul li a{
+  font-size: 1.3em;
+  transition: ease-in .30s;
+}
+.Insta:hover{
+  color: #E1306C;
+  font-size: 1.5em;
+  transition: ease-in .30s;
+}
+.Fb:hover{
+  color: #1877F2;
+  font-size: 1.5em;
+  transition: ease-in .30s;
+}
+.Pint:hover{
+  color: #E60023;
+  font-size: 1.5em;
+  transition: ease-in .30s;
+}
+.Tik:hover{
+  color: #010101;
+  font-size: 1.5em;
+  transition: ease-in .30s;
 }
 .usefull-info ul li{
   color: white;
@@ -360,4 +430,278 @@ margin: 15px 3px;
   color: rgb(223, 0, 22);
   cursor: pointer;
 
+}
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 500;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+  .bars {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav ul.nav-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background-color: #024751;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  nav ul.nav-menu.active {
+    right: 0;
+  }
+
+  .nav-icons {
+    gap: 0.8rem;
+  }
+  .hero{
+    position: relative;
+    display: inline-block;
+  }
+  .hero img{
+    width: 100%;
+    display: block;
+  }
+  
+  .center-text {
+    top: 35%;
+    left: 5%;
+    font-size: 28px;
+  }
+
+  .center-text h1 {
+    width: 90%;
+    font-size: 28px;
+    text-align: left;
+  }
+
+  .center-text p {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .center-text button {
+    width: 60%;
+    font-size: 18px;
+    padding: 10px;
+    margin: 15px 0;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-content: center;
+    justify-content: space-evenly;
+    position: relative;
+  }
+  .initial-image{
+    margin-bottom: 40px;
+  }
+  .cargo h1{
+    margin: 4vh 0px;
+  }
+  .categories{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .categories figure{
+    margin: 30px 10px;
+  }
+  .services{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  footer{
+    width: 100%;
+    height: 100%;
+  }
+  .footer-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+}
+
+@media (max-width: 510px) {
+  nav .logo {
+    font-size: 32px;
+  }
+
+  .nav-icons {
+    font-size: 1rem;
+  }
+  .center-text {
+    top: 50%;
+    left: 2%;
+    font-size: 20px;
+  }
+
+  .center-text h1 {
+    width: 100%;
+    font-size: 24px;
+  }
+
+  .center-text button {
+    width: 50%;
+    font-size: 16px;
+    padding: 8px;
+  }
+  .initial-image{
+    width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .small-images {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 20px;
+  }
+
+  figure {
+    width: 90%;
+    height: auto;
+  }
+
+  figure .small-img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+  }
+
+  figcaption {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  figure button {
+    width: 80%;
+    font-size: 16px;
+    padding: 10px;
+  margin-left: 10vw;
+  }
+  
+  .cargo h1 {
+    font-size: 24px;
+    padding: 0 10px;
+  }
+
+  .categories, .services, .footer-container, .bottom-hero-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categories figure,
+  .services .houser {
+    width: 90%;
+    height: auto;
+  }
+
+  .categories figure img {
+    height: auto;
+  }
+
+  .circle {
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+  }
+
+  .houser h3 {
+    font-size: 18px;
+  }
+
+  .bottom-hero {
+    width: 100%;
+    height: auto;
+  }
+
+  .bottom-center-text {
+    left: 5%;
+    font-size: 24px;
+  }
+
+  .bottom-center-text h1 {
+    font-size: 22px;
+  }
+
+  .bottom-center-text p {
+    font-size: 16px;
+    text-align: center;
+    width: 90%;
+  }
+
+  .bottom-center-text button {
+    width: 80%;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  footer {
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .newsletter input {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .newsletter button {
+    width: 90%;
+  }
+
+  .quick-links h2,
+  .usefull-info h2,
+  .connect h2 {
+    font-size: 18px;
+  }
+
+  .quick-links ul li,
+  .usefull-info ul li,
+  .connect ul li {
+    font-size: 14px;
+  }
+
+  .copy-cont p {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .backdrop {
+    z-index: 999; 
+  }
 }
