@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/willowhome/static/css/main.6a97be72.css",
-    "main.js": "/willowhome/static/js/main.af57d0b5.js",
+    "main.css": "/willowhome/static/css/main.198f4ba5.css",
+    "main.js": "/willowhome/static/js/main.b083711d.js",
     "static/media/cozyNest.jpg": "/willowhome/static/media/cozyNest.f274ae6150a5ac62f952.jpg",
     "static/media/office.jpg": "/willowhome/static/media/office.ef61c23a9cb06bde0369.jpg",
     "static/media/greenChair.jpg": "/willowhome/static/media/greenChair.c4b3433adf0f88c1c68a.jpg",
@@ -14,13 +14,12 @@
     "static/media/dining.jpg": "/willowhome/static/media/dining.99a09d1e861f3070666f.jpg",
     "static/media/ergoFlow.jpg": "/willowhome/static/media/ergoFlow.6cc01949adba00fcd00c.jpg",
     "static/media/bedroom.jpg": "/willowhome/static/media/bedroom.f3678c55fdac0cc76f26.jpg",
-    "static/media/logo.svg": "/willowhome/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/willowhome/index.html",
-    "main.6a97be72.css.map": "/willowhome/static/css/main.6a97be72.css.map",
-    "main.af57d0b5.js.map": "/willowhome/static/js/main.af57d0b5.js.map"
+    "main.198f4ba5.css.map": "/willowhome/static/css/main.198f4ba5.css.map",
+    "main.b083711d.js.map": "/willowhome/static/js/main.b083711d.js.map"
   },
   "entrypoints": [
-    "static/css/main.6a97be72.css",
-    "static/js/main.af57d0b5.js"
+    "static/css/main.198f4ba5.css",
+    "static/js/main.b083711d.js"
   ]
 }
