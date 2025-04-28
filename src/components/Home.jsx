@@ -7,136 +7,128 @@ const Home = () => {
   return (
    <>
    <section className='hero-section'>
-  <div className="hero">
-   <img src={require('./images/hero.jpg')} alt="" />
-   <div className="center-text">
-    <h1>
-    Furniture Made 
-    for Living
-    </h1>
-    <p>
-    Create a space that feels like home with 
-pieces designed for comfort, crafted to last,
- and styled to inspire.
-    </p>
-   <Link to='#'>
-   <button>shop</button>
-   </Link>
-   </div>
-  </div>
+    <div className="hero"  data-aos="fade">
+     <img src={require('./images/hero.jpg')} alt="Hero" data-aos="zoom-in" className='animate__animated animate__fadeIn animate__slow	3s'/>
+     <div className="center-text">
+      <h1 className='animate__animated animate__lightSpeedInRight animate__slow	2s'>Furniture Made for Living</h1>
+      <p className='animate__animated animate__lightSpeedInLeft animate__slow	2s'>Create a space that feels like home with pieces designed for comfort, crafted to last, and styled to inspire.</p>
+      <Link to='#'>
+        <button className='hvr-radial-out custom-radial animate__animated animate__fadeInLeft'>Shop</button>
+      </Link>
+     </div>
+    </div>
    </section>
-   <section className="sub-hero">
-    <h1>Shop All Home Needs</h1>
+
+   {/* Sub Hero Section */}
+   <section className="sub-hero" data-aos="fade-up">
+    <h1 data-aos="fade-right" data-aos-duration="3000" className='animate__animated animate__flipInY animate__repeat-3	3'>Shop All Home Needs</h1>
+    
     <div className="container">
-        <div className="initial-image">
-        <img src={require('./images/greenChair.jpg')} alt="Image of a chair" className='left-Image'/>
-        </div>
-        <div className="small-images">
-            <figure>
-                <img src={require('./images/loungeEwase.jpg')} alt="" className='small-img'/>
-                <figcaption>loungeEase</figcaption>
-                <button>click</button>
-            </figure>
-            <figure>
-                <img src={require('./images/cozyNest.jpg')} alt="" className='small-img'/>
-                <figcaption>cozyNest</figcaption>
-                <button>click</button>
-            </figure>
-        </div>
+      <div className="initial-image" data-aos="fade-right">
+        <img src={require('./images/greenChair.jpg')} alt="Green Chair" className='left-Image hvr-shrink'/>
+      </div>
+      <div className="small-images" data-aos="fade-left">
+        <figure data-aos="zoom-in" data-aos-delay="200" className='hvr-bob'>
+          <img src={require('./images/loungeEwase.jpg')} alt="loungeEase" className='small-img'/>
+          <figcaption>loungeEase</figcaption>
+          <button className='hvr-radial-out custom-radial'>Click</button>
+        </figure>
+        <figure data-aos="zoom-in" data-aos-delay="400" className='hvr-bob'>
+          <img src={require('./images/cozyNest.jpg')} alt="cozyNest" className='small-img'/>
+          <figcaption>cozyNest</figcaption>
+          <button className='hvr-radial-out custom-radial'>Click</button>
+        </figure>
+      </div>
     </div>
 
     <div className="container">
-        <div className="small-images">
-            <figure>
-                <img src={require('./images/ergoFlow.jpg')} alt="" className='small-img'/>
-                <figcaption>loungeEase</figcaption>
-                <button>click</button>
-            </figure>
-            <figure>
-                <img src={require('./images/curveline.jpg')} alt="" className='small-img'/>
-                <figcaption>cozyNest</figcaption>
-                <button>click</button>
-            </figure>
-        </div>
-        <div className="initial-image">
-        <img src={require('./images/twinSet.jpg')} alt="Image of a chair" className='left-Image'/>
-        </div>
+      <div className="small-images" data-aos="fade-right">
+        <figure data-aos="zoom-in" data-aos-delay="200" className='hvr-bob'>
+          <img src={require('./images/ergoFlow.jpg')} alt="ergoFlow" className='small-img'/>
+          <figcaption>ergoFlow</figcaption>
+          <button className='hvr-radial-out custom-radial'>Click</button>
+        </figure>
+        <figure data-aos="zoom-in" data-aos-delay="400" className='hvr-bob'>
+          <img src={require('./images/curveline.jpg')} alt="curveline" className='small-img hvr-float-shadow'/>
+          <figcaption>curveline</figcaption>
+          <button className='hvr-radial-out custom-radial'>Click</button>
+        </figure>
+      </div>
+      <div className="initial-image" data-aos="fade-left">
+        <img src={require('./images/twinSet.jpg')} alt="Twin Set" className='left-Image hvr-shrink'/>
+      </div>
     </div>
    </section>
+
+   {/* Cargo Section */}
    <section className="cargo">
-   <h1>smart Furniture for every home</h1>
-           <div className="categories">
-           <figure>
-            <img src={require('./images/livingRoom.jpg')} alt="" />
-            <figcaption>living room</figcaption>
-           </figure>
-           <figure>
-            <img src={require('./images/bedroom.jpg')} alt="" />
-            <figcaption>bedroom</figcaption>
-           </figure>
-           <figure>
-            <img src={require('./images/office.jpg')} alt="" />
-            <figcaption>office</figcaption>
-           </figure>
-           <figure>
-            <img src={require('./images/dining.jpg')} alt="" />
-            <figcaption>dining</figcaption>
-           </figure>
-           </div>
-           <h1>Our Special Essentials</h1>
-           <div className="services">
-            <div className="houser">
-                <p className="circle">
-                    <FaPen className='icon'/>
-                </p>
-                <h3>Smart Design</h3>
-                <p>Thoughtfully crafted for style 
-                and daily comfort</p>
-            </div>
-            <div className="houser">
-            <p className="circle">
-                <FaLayerGroup/>
-            </p>
-                <h3>Built To Last</h3>
-                <p>Durable materials, made to
-                stand the test.</p>
-            </div>
-            <div className="houser">
-            <p className="circle">
-              <FaClipboardUser/>
-            </p>
-                <h3>Space optimization</h3>
-                <p>Compact pieces that maximize 
-                every inch.</p>
-            </div>
-            <div className="houser">
-            <p className="circle">
-                <FaTruck/>
-            </p>
-                <h3>Easy Shop</h3>
-                <p>Seamless browsing, fast checkout,
-                doorstep delivery.</p>
-            </div>
-           </div>
+    <h1 data-aos="fade-right">Smart Furniture for Every Home</h1>
+    
+    <div className="categories">
+      <figure data-aos="fade-up" data-aos-delay="200">
+        <img src={require('./images/livingRoom.jpg')} alt="Living Room" className="hvr-float"/>
+        <figcaption className='hvr-float-shadow'>Living Room</figcaption>
+      </figure>
+      <figure data-aos="fade-up" data-aos-delay="300">
+        <img src={require('./images/bedroom.jpg')} alt="Bedroom" className="hvr-float"/>
+        <figcaption className='hvr-float-shadow'>Bedroom</figcaption>
+      </figure>
+      <figure data-aos="fade-up" data-aos-delay="400">
+        <img src={require('./images/office.jpg')} alt="Office" className="hvr-float"/>
+        <figcaption className='hvr-float-shadow'>Office</figcaption>
+      </figure>
+      <figure data-aos="fade-up" data-aos-delay="500">
+        <img src={require('./images/dining.jpg')} alt="Dining" className="hvr-float"/>
+        <figcaption className='hvr-float-shadow'>Dining</figcaption>
+      </figure>
+    </div>
+
+    <h1 data-aos="fade-left">Our Special Essentials</h1>
+
+    <div className="services">
+      <div className="houser" data-aos="flip-left" data-aos-delay="300">
+        <p className="circle">
+          <FaPen className='icon'/>
+        </p>
+        <h3>Smart Design</h3>
+        <p>Thoughtfully crafted for style and daily comfort</p>
+      </div>
+      <div className="houser" data-aos="flip-left" data-aos-delay="400">
+        <p className="circle">
+          <FaLayerGroup/>
+        </p>
+        <h3>Built To Last</h3>
+        <p>Durable materials, made to stand the test.</p>
+      </div>
+      <div className="houser" data-aos="flip-left" data-aos-delay="450">
+        <p className="circle">
+          <FaClipboardUser/>
+        </p>
+        <h3>Space Optimization</h3>
+        <p>Compact pieces that maximize every inch.</p>
+      </div>
+      <div className="houser" data-aos="flip-left" data-aos-delay="500">
+        <p className="circle">
+          <FaTruck/>
+        </p>
+        <h3>Easy Shop</h3>
+        <p>Seamless browsing, fast checkout, doorstep delivery.</p>
+      </div>
+    </div>
    </section>
-   <section className='bottom-hero-section'>
-  <div className="bottom-hero">
-   <img src={require('./images/yellowCouch.jpg')} alt="" />
-   <div className="bottom-center-text">
-    <h1>
-    Furniture Made 
-    for Living
-    </h1>
-    <p>
-    Create a space that feels like home with 
-pieces designed for comfort, crafted to last,
- and styled to inspire.
-    </p>
-   <Link to='#'>
-   <button>shop</button>
-   </Link>
-   </div>
-  </div>
+
+   {/* Bottom Hero Section */}
+   <section className='bottom-hero-section' data-aos="fade">
+    <div className="bottom-hero">
+     <img src={require('./images/yellowCouch.jpg')} alt="Yellow Couch" data-aos="zoom-in" />
+     <div className="bottom-center-text" data-aos="fade-up" data-aos-delay="300">
+      <h1>Furniture Made for Living</h1>
+      <p>Create a space that feels like home with pieces designed for comfort, crafted to last, and styled to inspire.</p>
+      <Link to='#'>
+        <button data-aos="fade-up" data-aos-delay="600" className='hvr-radial-out custom-radial'>Shop</button>
+      </Link>
+     </div>
+    </div>
    </section>
    </>
   )
