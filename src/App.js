@@ -8,6 +8,8 @@ import Loading from './components/Loading';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'hover.css/css/hover.css';
+import Shop from './components/shop/Shop';
+import ProductInfo from './components/shop/ProductInfo';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -21,17 +23,19 @@ function App() {
 
   return (
     <Router basename="willowhome">
-      {loading ? ( 
+      {/* {loading ? ( 
         <Loading />
       ) : (
-        <>
+        <> </>
+      )} */}
           <Header />
           <Routes>
             <Route index element={<Home />} />
+            <Route path='/shop' element={<Shop/>}/>
+            <Route path='/productInfo' element={<ProductInfo/>}/>
           </Routes>
           <Footer />
-        </>
-      )}
+       
     </Router>
   );
 }

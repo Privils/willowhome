@@ -749,3 +749,52 @@ margin: 15px 3px;
 .cargo img{
   cursor: pointer;
 }
+/* -----------------------shop styles----------------- */
+.shop-hero{
+  text-transform: capitalize;
+}
+.shop-image-container {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  margin: 3vh 0;
+  width: 100%;
+  place-content: center;
+  align-items: center;
+}
+
+.shop-image-container figure {
+  width: 250px;
+  height: 100%;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  place-content: center;
+  cursor: pointer;
+}
+
+
+.shop-image-container img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.shop-image-container figcaption {
+  margin-top: 0.70rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
+.shop-image-container button:hover {
+ cursor: pointer;
+} 

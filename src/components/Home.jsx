@@ -12,8 +12,8 @@ const Home = () => {
      <div className="center-text">
       <h1 className='animate__animated animate__lightSpeedInRight animate__slow	2s'>Furniture Made for Living</h1>
       <p className='animate__animated animate__lightSpeedInLeft animate__slow	2s'>Create a space that feels like home with pieces designed for comfort, crafted to last, and styled to inspire.</p>
-      <Link to='#'>
-        <button className='hvr-radial-out custom-radial animate__animated animate__fadeInLeft'>Shop</button>
+      <Link to='./Shop'>
+      <button className='hvr-radial-out custom-radial animate__animated animate__fadeInLeft'>Shop</button>
       </Link>
      </div>
     </div>
@@ -31,12 +31,12 @@ const Home = () => {
         <figure data-aos="zoom-in" data-aos-delay="200" className='hvr-bob'>
           <img src={require('./images/loungeEwase.jpg')} alt="loungeEase" className='small-img'/>
           <figcaption>loungeEase</figcaption>
-          <button className='hvr-radial-out custom-radial'>Click</button>
+          <button className='hvr-radial-out custom-radial'>Add to cart</button>
         </figure>
         <figure data-aos="zoom-in" data-aos-delay="400" className='hvr-bob'>
           <img src={require('./images/cozyNest.jpg')} alt="cozyNest" className='small-img'/>
           <figcaption>cozyNest</figcaption>
-          <button className='hvr-radial-out custom-radial'>Click</button>
+          <button className='hvr-radial-out custom-radial'>Add to cart</button>
         </figure>
       </div>
     </div>
@@ -46,12 +46,12 @@ const Home = () => {
         <figure data-aos="zoom-in" data-aos-delay="200" className='hvr-bob'>
           <img src={require('./images/ergoFlow.jpg')} alt="ergoFlow" className='small-img'/>
           <figcaption>ergoFlow</figcaption>
-          <button className='hvr-radial-out custom-radial'>Click</button>
+          <button className='hvr-radial-out custom-radial'>Add to cart</button>
         </figure>
         <figure data-aos="zoom-in" data-aos-delay="400" className='hvr-bob'>
           <img src={require('./images/curveline.jpg')} alt="curveline" className='small-img hvr-float-shadow'/>
           <figcaption>curveline</figcaption>
-          <button className='hvr-radial-out custom-radial'>Click</button>
+          <button className='hvr-radial-out custom-radial'>Add to cart</button>
         </figure>
       </div>
       <div className="initial-image" data-aos="fade-left">
