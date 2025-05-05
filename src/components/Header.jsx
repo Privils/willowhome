@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaBars, FaClipboard, FaClosedCaptioning, FaSearch } from 'react-icons/fa';
-import { FaSquareXmark } from 'react-icons/fa6';
+import { FaCartShopping, FaSquareXmark } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import 'animate.css'; 
 
@@ -26,6 +26,7 @@ const Header = () => {
         <div className="nav-icons animate__animated animate__bounceIn animate__slow	3s">
           <FaSearch />
           <FaClipboard />
+                      <FaBars onClick={toggleMenu}/>
           <FaBars className="bars" onClick={toggleMenu} />
         </div>
       </nav>

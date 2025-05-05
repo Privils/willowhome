@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="copy-cont" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+        <div className="copy-cont">
           <p className="copywrite">&copy; 2025 <Link to="privilswebdev.co.za">privilswebdev</Link>. all rights reserved</p>
         </div>
       </footer>
