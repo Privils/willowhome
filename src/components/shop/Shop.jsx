@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
+import { FaSquareXmark } from "react-icons/fa6";
 
-const Shop = () => {
+const Shop = ({ isCartOpen, setIsCartOpen }) => {
   const shopImages = {
     images: [
       {
@@ -156,13 +157,44 @@ const Shop = () => {
           </div>
         </div>
       </section>
+      {isCartOpen && <div className="cart-overlay" onClick={() => setIsCartOpen(false)}></div>}
+
       <section className="shop">
-       <div className="cart"></div>
+      <div className={`cart ${isCartOpen ? 'open' : ''}`}>
+          <button className="close-btn" onClick={() => setIsCartOpen(false)}>×</button>
+          <h1 class="section-header">CART</h1>
+     
+
+      <div className="cart-items">
+          <div className="cart-row" >
+            <figure>
+            <img src={require("./images/18.jpg")} alt="" width="70px" height="70px" />
+            </figure>
+           <div className="item-info">
+           <p className="cart-item-name">gucci</p>
+            <p className="cart-item-price">R400</p>
+            <input
+              className="cart-item-quantity"
+              type="number"
+              min="1"
+            />
+           </div>
+            <FaSquareXmark className='mark'/>
+          </div>
+      </div>
+
+      <div className="cart-total">
+        <strong>Total:</strong>
+        <span className="cart-total-price">$12</span>
+      </div>
+
+      <button className="btn-purchase" type="button">Purchase</button>
+</div>
        <div className="shop-image-container">
 
        { Array.isArray(myImages) && myImages.map((item)=>(
       
-        <figure key={item.id}>
+        <figure className="hvr-bob" key={item.id}>
           <img src={item.url} alt={item.name}/>
           <figcaption>{item.name} <br /> {item.price}</figcaption>
           <button className='hvr-radial-out custom-radial'>add to cart</button>

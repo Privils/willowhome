@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { FaBars, FaClipboard, FaClosedCaptioning, FaSearch } from 'react-icons/fa';
+import { FaBars, FaClipboard, FaClosedCaptioning, FaSearch, FaShoppingCart } from 'react-icons/fa';
 import { FaCartShopping, FaSquareXmark } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import 'animate.css'; 
 
-const Header = () => {
+const Header = ({ setIsCartOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
+   
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -26,7 +27,8 @@ const Header = () => {
         <div className="nav-icons animate__animated animate__bounceIn animate__slow	3s">
           <FaSearch />
           <FaClipboard />
-                      <FaBars onClick={toggleMenu}/>
+          
+                      <FaShoppingCart onClick={() => setIsCartOpen(prev => !prev)}/>
           <FaBars className="bars" onClick={toggleMenu} />
         </div>
       </nav>
