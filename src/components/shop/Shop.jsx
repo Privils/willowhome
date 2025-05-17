@@ -133,11 +133,26 @@ const Shop = ({ isCartOpen, setIsCartOpen }) => {
       }
     ]
   };
-  const [myImages, setMyImages] = useState([])
+
+
+
+  const [myImages, setMyImages] = useState([]);
+  const [removeItems, setRemoveItems] = useState([])
   useEffect(()=>{
   setMyImages(shopImages.images)
   }, [])
  
+  const thankCustomer = () =>{
+    alert("Thank you for shopping with willowhome !!!")
+  } 
+
+  // when i use this funtion its completly deleted and wont show even if i refresh
+const removeItemsBtn = (index) => {
+const newCart = [...removeItems];
+newCart.splice(index, 1);
+setRemoveItems(newCart)
+}
+
   return (
     <>
       <section className="hero-section">
@@ -166,7 +181,11 @@ const Shop = ({ isCartOpen, setIsCartOpen }) => {
      
 
       <div className="cart-items">
-          <div className="cart-row" >
+          <div className="cart-row">
+            { removeItems.map((item, index)=>(
+
+          
+            <div className="cart-row-items" key={index}>
             <figure>
             <img src={require("./images/18.jpg")} alt="" width="70px" height="70px" />
             </figure>
@@ -179,6 +198,66 @@ const Shop = ({ isCartOpen, setIsCartOpen }) => {
               min="1"
             />
            </div>
+           <div className="cart-btn-container">
+            <button id="btn" className="hvr-radial-out custom-radial" onClick={() => removeItemsBtn(index)}>remove</button>
+           </div>
+</div>  
+ ))}
+  { removeItems.map((item, index)=>(
+             <div className="cart-row-items" key={index}>
+           <figure>
+            <img src={require("./images/18.jpg")} alt="" width="70px" height="70px" />
+            </figure>
+           <div className="item-info">
+           <p className="cart-item-name">gucci</p>
+            <p className="cart-item-price">R400</p>
+            <input
+              className="cart-item-quantity"
+              type="number"
+              min="1"
+            />
+           </div>
+           <div className="cart-btn-container">
+            <button id="btn" className="hvr-radial-out custom-radial" onClick={() => removeItemsBtn(index)}>remove</button>
+           </div>
+</div> ))}
+<div className="cart-row-items">
+
+           <figure>
+            <img src={require("./images/18.jpg")} alt="" width="70px" height="70px" />
+            </figure>
+           <div className="item-info">
+           <p className="cart-item-name">gucci</p>
+            <p className="cart-item-price">R400</p>
+            <input
+              className="cart-item-quantity"
+              type="number"
+              min="1"
+            />
+           </div>
+           <div className="cart-btn-container">
+            <button id="btn" className="hvr-radial-out custom-radial">remove</button>
+           </div>
+</div>
+
+<div className="cart-row-items">
+           <figure>
+            <img src={require("./images/18.jpg")} alt="" width="70px" height="70px" />
+            </figure>
+           <div className="item-info">
+           <p className="cart-item-name">gucci</p>
+            <p className="cart-item-price">R400</p>
+            <input
+              className="cart-item-quantity"
+              type="number"
+              min="1"
+            />
+           </div>
+           <div className="cart-btn-container">
+            <button id="btn" className="hvr-radial-out custom-radial">remove</button>
+           </div></div>
+
+          
             <FaSquareXmark className='mark'/>
           </div>
       </div>
@@ -188,7 +267,7 @@ const Shop = ({ isCartOpen, setIsCartOpen }) => {
         <span className="cart-total-price">$12</span>
       </div>
 
-      <button className="btn-purchase" type="button">Purchase</button>
+      <button className="btn-purchase" type="button" onClick={thankCustomer}>Purchase</button>
 </div>
        <div className="shop-image-container">
 
