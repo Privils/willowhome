@@ -14,6 +14,7 @@ import ProductInfo from './components/shop/ProductInfo';
 function App() {
   const [loading, setLoading] = useState(true);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [cartItem, setCartItem] = useState([]);
 
   useEffect(() => {
     AOS.init();
@@ -32,7 +33,8 @@ function App() {
           <Header setIsCartOpen={setIsCartOpen}/>
           <Routes>
             <Route index element={<Home />} />
-            <Route path='/shop' element={<Shop isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} />} />
+            <Route path='/shop' element={<Shop isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} cartItem={cartItem}
+        setCartItems={setCartItem}/>} />
 
           </Routes>
           <Footer />

@@ -4,8 +4,10 @@ import { FaCartShopping, FaSquareXmark } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import 'animate.css'; 
 
-const Header = ({ setIsCartOpen }) => {
+const Header = ({ setIsCartOpen,  cartItem }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const totalQuantity = (cartItem || []).reduce((total, item) => total + (item.quantity || 1), 0);
+
    
 
   const toggleMenu = () => {
@@ -29,6 +31,9 @@ const Header = ({ setIsCartOpen }) => {
           <FaClipboard />
           
                       <FaShoppingCart onClick={() => setIsCartOpen(prev => !prev)}/>
+                      {/* {totalQuantity > 0 && (
+          <span className="cart-badge">{totalQuantity}</span>
+        )} */}
           <FaBars className="bars" onClick={toggleMenu} />
         </div>
       </nav>
