@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/willowhome/static/css/main.0ebc1f8c.css",
-    "main.js": "/willowhome/static/js/main.46724b7b.js",
+    "main.css": "/willowhome/static/css/main.91a924ef.css",
+    "main.js": "/willowhome/static/js/main.0c4c3c27.js",
     "static/media/hero.jpg": "/willowhome/static/media/hero.70b526f9e19e286df5c7.jpg",
     "static/media/9.jpg": "/willowhome/static/media/9.c1b2208a4e8f3a6e733a.jpg",
     "static/media/17.jpg": "/willowhome/static/media/17.2d13f369e515c9529da8.jpg",
@@ -34,11 +34,11 @@
     "static/media/twinSet.jpg": "/willowhome/static/media/twinSet.c7539ef82fa49df8112c.jpg",
     "static/media/ergoFlow.jpg": "/willowhome/static/media/ergoFlow.ee040948f8ce56caf036.jpg",
     "index.html": "/willowhome/index.html",
-    "main.0ebc1f8c.css.map": "/willowhome/static/css/main.0ebc1f8c.css.map",
-    "main.46724b7b.js.map": "/willowhome/static/js/main.46724b7b.js.map"
+    "main.91a924ef.css.map": "/willowhome/static/css/main.91a924ef.css.map",
+    "main.0c4c3c27.js.map": "/willowhome/static/js/main.0c4c3c27.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ebc1f8c.css",
-    "static/js/main.46724b7b.js"
+    "static/css/main.91a924ef.css",
+    "static/js/main.0c4c3c27.js"
   ]
 }
