@@ -20,16 +20,16 @@ function App() {
     AOS.init();
     setTimeout(() => {
       setLoading(false); // After 3 seconds, set loading to false
-    }, 8000);
+    }, 4000);
   }, []);
 
   return (
     <Router basename="willowhome">
-      {/* {loading ? ( 
+      {loading ? ( 
         <Loading />
       ) : (
         <> </>
-      )} */}
+      )}
           <Header setIsCartOpen={setIsCartOpen}/>
           <Routes>
             <Route index element={<Home />} />
