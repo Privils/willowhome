@@ -5,6 +5,8 @@
 }
 body{
   background: linear-gradient(to right, #43c6ac 0%, #F8FFAE 100%);
+  max-width: max-content;
+  overflow-x: hidden;
 }
 header {
   background-color: rgb(10, 28, 30);
@@ -105,7 +107,7 @@ nav ul li a {
   border: 1px solid rgb(255, 255, 255);
   color: white;
   font-weight: 900;
-
+   background: #102830;
 }
 .center-text button:hover{
   padding: 4px;
@@ -437,11 +439,11 @@ margin: 15px 3px;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-size: 25px;
+  font-size: 27px;
   z-index: 9999;
 }
 .loader span{
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 600;
   text-transform: capitalize;
 }
@@ -755,6 +757,11 @@ margin: 15px 3px;
 
   .backdrop {
     z-index: 999; 
+  }
+  @media (max-width: 425px) {
+    .deco{
+      display: none;
+    }
   }
 }
 .sub-hero img{
